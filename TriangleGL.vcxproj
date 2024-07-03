@@ -141,8 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
-    <None Include="src\sha_fragment.glsl" />
-    <None Include="src\sha_vertex.glsl" />
+    <None Include="x64\Debug\src\fragment_shader.glsl" />
+    <None Include="x64\Debug\src\vertex_shader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

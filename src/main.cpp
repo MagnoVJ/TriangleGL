@@ -33,7 +33,7 @@ int main() {
 		return -1;
 	}
 
-	Shader triangleShader("./src/sha_vertex.glsl", "./src/sha_fragment.glsl");
+	Shader triangleShader("./src/vertex_shader.glsl", "./src/fragment_shader.glsl");
 
 	float vertices[] = {
 		-0.5f, -0.5f, 0.0f,
