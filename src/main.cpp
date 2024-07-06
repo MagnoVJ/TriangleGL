@@ -1,4 +1,5 @@
 #include "shader.hpp"
+#include "stb_image.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -19,6 +20,17 @@ int main() {
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Triangle Window", nullptr, nullptr);
+
+	int appImageWidth, appImageHeight;
+	int appImageChannels;
+	unsigned char* appImagePixels = stbi_load("./assets/GhoststarFINISHED.png", &appImageWidth, &appImageHeight, &appImageChannels, 4);
+
+	GLFWimage images[1];
+	images[0].width = appImageWidth;
+	images[0].height = appImageHeight;
+	images[0].pixels = appImagePixels;
+
+	glfwSetWindowIcon(window, 1, images);
 
 	if (window == nullptr) {
 		std::cout << "Failed to create GLFW window" << std::endl;

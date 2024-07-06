@@ -135,14 +135,23 @@
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\shader.cpp" />
+    <ClCompile Include="src\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="src\shader.hpp" />
+    <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="x64\Debug\src\fragment_shader.glsl" />
     <None Include="x64\Debug\src\vertex_shader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TriangleGL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Users\55379\Images\GhoststarFINISHED.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
